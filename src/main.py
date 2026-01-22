@@ -40,10 +40,10 @@ def set_field(js_obj, field_name: str, value):
 
 def main():
     # --- Paths (edit these for your laptop) ---
-    excel_path = r"H:\Documents\Ref_File\Drawing_Entry.xlsx"
-    pdf_input = r"H:\Documents\Drawings\Blank_Drawing.pdf"
-    save_folder = r"H:\Documents\Drawings\FilledForms"
-
+    excel_path = r"sample_data/Drawing_Entry_SAMPLE.xlsx"
+    pdf_input = r"templates/Blank_Template_PUBLIC.pdf"
+    save_folder = r"output"
+    
     os.makedirs(save_folder, exist_ok=True)
 
     # --- Load Excel (Sheet1 like your script) ---
