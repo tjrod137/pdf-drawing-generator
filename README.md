@@ -19,15 +19,17 @@ This project mirrors real operations automation work: standardize inputs → aut
 - `templates/` - sample fillable PDF template
 - `output_samples/` - optional screenshots/outputs
 
-## Run locally
-```bash
-pip install -r requirements.txt
-python src/main.py
-
 ## Requirements
 - Windows
 - Adobe Acrobat (for PDF form automation)
 
 ## Data
 This repo uses sample/sanitized data only. Do not upload proprietary templates or customer information.
+
+
+## Run locally
+```bash
+pip install -r requirements.txt
+python src/main.py
+
 
