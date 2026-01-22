@@ -22,17 +22,17 @@ Reduced a high-volume workflow from days to minutes, enabling same-day turnaroun
 - `templates/` - sample fillable PDF template
 - `output_samples/` - optional screenshots/outputs
 
+
+## Run locally
+```bash
+pip install -r requirements.txt
+python src/main.py
+```
 ## Requirements
 - Windows
 - Adobe Acrobat (for PDF form automation)
 
 ## Data
 This repo uses sample/sanitized data only. Do not upload proprietary templates or customer information.
-
-
-## Run locally
-```bash
-pip install -r requirements.txt
-python src/main.py
 
 
