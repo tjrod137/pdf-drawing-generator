@@ -22,6 +22,8 @@ Reduced a high-volume workflow from days to minutes, enabling same-day turnaroun
 - `templates/` - sample fillable PDF template
 - `output_samples/` - optional screenshots/outputs
 
+## Example output
+See `output_samples/` for sample generated PDFs (fake data), including combined packet examples.
 
 ## Run locally
 ```bash
