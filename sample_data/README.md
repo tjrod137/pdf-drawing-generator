@@ -1,1 +1,1 @@
-Put sanitized/sample Excel inputs here (no company data).
+Validated on large internal datasets; repo includes a small sanitized sample for demonstration.
