@@ -13,6 +13,9 @@ Generates flattened PDF drawing forms from standardized Excel input and saves ou
 ## Why it matters
 This project mirrors real operations automation work: standardize inputs → automate output generation → reduce manual effort and errors.
 
+## Results (real-world)
+Reduced a high-volume workflow from days to minutes and enabled same-day turnaround for quote + drawing deliverables.
+
 ## Project structure
 - `src/` - Python scripts
 - `sample_data/` - sanitized sample Excel inputs
