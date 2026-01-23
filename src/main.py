@@ -125,13 +125,22 @@ def main():
         )
 
         # --- Acrobat COM: open PDF and fill ---
-        acro_app = win32com.client.Dispatch("AcroExch.App")
-        pd_doc = win32com.client.Dispatch("AcroExch.PDDoc")
+        import os
 
-        opened = pd_doc.Open(pdf_input)
+        acro_app = win32.Dispatch("AcroExch.App")
+        pd_doc = win32.Dispatch("AcroExch.PDDoc")
+
+        # Acrobat COM is picky: use absolute Windows path
+        pdf_input_abs = os.path.abspath(pdf_input).replace("/", "\\")
+        opened = pd_doc.Open(pdf_input_abs)
+
         if not opened:
-            acro_app.Exit()
-            raise RuntimeError(f"Failed to open PDF template: {pdf_input}")
+            try:
+                acro_app.Exit()
+            except Exception:
+                pass
+            raise RuntimeError(f"Failed to open PDF template: {pdf_input_abs}")
+
 
         js_obj = pd_doc.GetJSObject()
 
