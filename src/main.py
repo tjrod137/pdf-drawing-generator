@@ -42,7 +42,7 @@ def main():
     # --- Paths (edit these for your laptop) ---
     excel_path = r"sample_data/Drawing_Entry_SAMPLE.xlsx"
     pdf_input = r"templates/Blank_Template_PUBLIC.pdf"
-    save_folder = r"output"
+    save_folder = str(Path(__file__).resolve().parents[1] / "output")
     
     os.makedirs(save_folder, exist_ok=True)
 
@@ -217,7 +217,7 @@ def main():
 
         acro_app.Exit()
 
-        print(f"Saved: {pdf_output}")
+        print(f"Saved: {os.path.abspath(pdf_output)}")
 
     wb.close()
     print("Done: all PDFs created.")
