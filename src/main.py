@@ -5,7 +5,7 @@ from pathlib import Path
 import openpyxl
 
 # Acrobat COM (requires: pip install pywin32, and Adobe Acrobat installed)
-import win32com.client
+import win32com.client as win32
 
 
 INVALID_FILENAME_CHARS = r'[\/:*?"<>|]'
@@ -125,8 +125,6 @@ def main():
         )
 
         # --- Acrobat COM: open PDF and fill ---
-        import os
-
         acro_app = win32.Dispatch("AcroExch.App")
         pd_doc = win32.Dispatch("AcroExch.PDDoc")
 
